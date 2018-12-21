@@ -1,8 +1,25 @@
 .page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: url("../../img/bg-hide-mobile@1x.jpg") no-repeat center;
   background-size: cover;
 
   &--opened {
     background: #f3f2da;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page {
+    background: url("../img/bg-top-desktop@1x.jpg") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+
+    &--opened {
+      background: url("../img/bg-bottom-desktop@1x.png") no-repeat center;
+      background-size: cover;
+      transition: all 1.5s ease-out;
+    }
   }
 }

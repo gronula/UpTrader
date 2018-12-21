@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .header__title {
@@ -18,4 +19,91 @@
 
 .header__types {
   display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    height: 100vh;
+    min-height: 560px;
+
+    &--closed {
+      opacity: 0;
+      transform: translateY(-100vh);
+      transition: all 1s ease-out;
+    }
+  }
+
+  .header__title {
+    font-size: 48px;
+    margin-top: auto;
+    margin-bottom: 70px;
+  }
+
+  .header__types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__button {
+    width: 364px;
+    height: 364px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    font-size: 28px;
+    color: #242424;
+    line-height: 1.2;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-size: contain;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--trade::before {
+      width: 83px;
+      height: 64px;
+      top: 110px;
+      background: url("../img/icon-trade.svg") no-repeat center;
+    }
+
+    &--invest::before {
+      width: 79px;
+      height: 66px;
+      top: 110px;
+      background: url("../img/icon-invest.svg") no-repeat center;
+    }
+
+    &--invite::before {
+      width: 70px;
+      height: 84px;
+      top: 110px;
+      background: url("../img/icon-invite.svg") no-repeat center;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      width: 345px;
+      height: 345px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #00b0a2;
+      border-radius: 50%;
+    }
+  }
 }
