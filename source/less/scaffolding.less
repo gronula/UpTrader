@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "PF DINText Pro";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+  src:
+    url("../fonts/pfdintextpro-light.woff2") format("woff2"),
+    url("../fonts/pfdintextpro-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PF DINText Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+  src:
+    url("../fonts/pfdintextpro-regular.woff2") format("woff2"),
+    url("../fonts/pfdintextpro-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PF DINText Pro";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+
+  src:
+    url("../fonts/pfdintextpro-medium.woff2") format("woff2"),
+    url("../fonts/pfdintextpro-medium.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+  min-width: 375px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 375px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "PF DINText Pro", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  color: @text-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
